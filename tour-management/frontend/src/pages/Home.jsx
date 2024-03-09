@@ -8,6 +8,7 @@ import heroImg03 from '../assets/images/hero-img03.jpg';
 import Subtitle from './../shared/Subtitle';
 
 import SearchBar from '../shared/SearchBar';
+import FeaturedTourList from '../components/Featured-Tours/FeaturedTourList';
 
 const Home = () => {
     return <>
@@ -45,6 +46,20 @@ const Home = () => {
                 </Row>
             </Container>
         </section>
+        {/* hero section end */}
+
+        {/* featured tours section start */}
+        <section>
+            <Container>
+                <Row>
+                    <Col lg='12' className='mb-5'>
+                        <h2 className="featured_tours-title">Our Featured Tours</h2>
+                    </Col>
+                    <FeaturedTourList />
+                </Row>
+            </Container>
+        </section>
+        {/* featured tours section end */}
 
     </>;
 };
