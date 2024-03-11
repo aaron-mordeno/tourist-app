@@ -29,6 +29,10 @@ const tours = [
         name: "bhon joe vi",
         rating: 4.5,
       },
+      {
+        name: "herpty derpty",
+        rating: 4.9,
+      },
     ],
     avgRating: 4.5,
     photo: tourImg01,
@@ -46,6 +50,10 @@ const tours = [
       {
         name: "jhon doe",
         rating: 4.6,
+      },
+      {
+        name: "chris wong",
+        rating: 4.9,
       },
     ],
     avgRating: 4.5,

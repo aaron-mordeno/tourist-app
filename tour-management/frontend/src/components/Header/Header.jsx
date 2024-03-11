@@ -6,7 +6,7 @@ import logo from '../../assets/images/logo.png'
 import './header.css';
 import '../../App.css';
 
-const nav_links=[
+const nav_links = [
     {
         path:'/home',
         display:'Home'
@@ -19,7 +19,7 @@ const nav_links=[
         path:'/tours',
         display:'Tours'
     },
-]
+];
 
 const Header = () => {
     return <header className="header">
