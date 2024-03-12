@@ -5,9 +5,10 @@ import { Col } from 'reactstrap';
 
 
 const FeaturedTourList = () => {
+  const featuredTours = tourData.filter(tour => tour.featured);
   return <>
   {
-    tourData?.map(tour=>(
+    featuredTours?.map(tour=>(
         <Col lg='3' className='mb-4' key={tour.id}>
             <TourCard tour={tour} />
         </Col>

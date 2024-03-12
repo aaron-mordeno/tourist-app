@@ -2,15 +2,17 @@ import React from 'react';
 import '../styles/home.css';
 
 import { Container, Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import heroImg01 from '../assets/images/hero-img01.jpg';
 import heroImg02 from '../assets/images/hero-img02.jpg';
 import heroImg03 from '../assets/images/hero-img03.jpg';
 import Subtitle from './../shared/Subtitle';
 
 import SearchBar from '../shared/SearchBar';
-import FeaturedTourList from '../components/Featured-Tours/FeaturedTourList';
+import FeaturedToursList from '../components/Featured-Tours/FeaturedToursList';
 
 const Home = () => {
+
     return <>
     
     {/* hero section start */}
@@ -55,8 +57,10 @@ const Home = () => {
                     <Col lg='12' className='mb-5'>
                         <h2 className="featured_tours-title">Our Featured Tours</h2>
                     </Col>
-                    <FeaturedTourList />
+                    <FeaturedToursList />
                 </Row>
+
+                <Link to={`/tours`} class='see_all_link'>See All Tours</Link>
             </Container>
         </section>
         {/* featured tours section end */}

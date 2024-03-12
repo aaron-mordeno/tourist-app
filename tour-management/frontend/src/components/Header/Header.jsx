@@ -12,10 +12,6 @@ const nav_links = [
         display:'Home'
     },
     {
-        path:'/about',
-        display:'About'
-    },
-    {
         path:'/tours',
         display:'Tours'
     },

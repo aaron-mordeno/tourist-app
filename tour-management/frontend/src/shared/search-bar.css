@@ -38,3 +38,8 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.submitBtn {
+    position: relative;
+    bottom: 8px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import { Container, Row, Col, ListGroup, ListGroupItems, ListGroupItem } from 'reactstrap';
+import { Container, Row, Col, ListGroup, ListGroupItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 
@@ -10,20 +10,12 @@ const quick_links = [
         display:'Home'
     },
     {
-        path:'/about',
-        display:'About'
-    },
-    {
         path:'/tours',
         display:'Tours'
     },
 ];
 
 const quick_links2 = [
-    {
-        path:'#',
-        display:'(Placeholder)'
-    },
     {
         path:'/login',
         display:'Login'
