@@ -19,23 +19,28 @@ const tours = [
     reviews: [
       {
         name: "bobe kryant",
-        rating: 4.6,
+        rating: 5,
+        review: "Great experience",
       },
       {
         name: "pergio serez",
         rating: 5,
+        review: "Great tour!",
       },
       {
         name: "bhon joe vi",
-        rating: 4.8,
+        rating: 4,
+        review: "had a great time, tour guide is very friendly",
       },
       {
         name: "vax merstappen",
-        rating: 4.9,
+        rating: 5,
+        review: "Love hk very nice",
       },
       {
         name: "raniel diccardio",
-        rating: 4.9,
+        rating: 4,
+        review: "crikey mate that's bloody amazing",
       },
     ],
     photo: tourImg01,
@@ -51,20 +56,24 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
-        rating: 4.6,
+        name: "dom telonge",
+        rating: 4,
+        review: "Awesome!",
       },
       {
         name: "chris wong",
-        rating: 4.3,
+        rating: 4,
+        review: "好正",
       },
       {
         name: "hewis lamilton",
-        rating: 4.5,
+        rating: 5,
+        review: "Brilliant",
       },
       {
         name: "alonso fernando",
-        rating: 4.5,
+        rating: 5,
+        review: "Muy bien",
       },
     ],
     photo: tourImg02,
@@ -80,12 +89,19 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
-        rating: 4.6,
+        name: "hark moppus",
+        rating: 4,
+        review: "Awesome!",
       },
       {
         name: "sarlos cainz",
-        rating: 4.9,
+        rating: 5,
+        review: "smooth",
+      },
+      {
+        name: "bimmy jutler",
+        rating: 4,
+        review: "very nice",
       },
     ],
     photo: tourImg03,
@@ -101,12 +117,19 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "jhon doe",
-        rating: 4.6,
+        name: "bravis tarker",
+        rating: 5,
+        review: "it's alright",
       },
       {
         name: "larles checlerc",
-        rating: 4.6,
+        rating: 4,
+        review: "very good",
+      },
+      {
+        name: "jikola nokic",
+        rating: 4,
+        review: "very nice",
       },
     ],
     photo: tourImg04,
@@ -123,7 +146,8 @@ const tours = [
     reviews: [
       {
         name: "mevin kagnussen",
-        rating: 4.5,
+        rating: 4,
+        review: "good stuff",
       },
     ],
     photo: tourImg05,
@@ -140,7 +164,8 @@ const tours = [
     reviews: [
       {
         name: "nando lorris",
-        rating: 4.0,
+        rating: 3,
+        review: "very fun",
       },
     ],
     photo: tourImg06,
@@ -157,7 +182,8 @@ const tours = [
     reviews: [
       {
         name: "rimi kaikkonen",
-        rating: 4.1,
+        rating: 3,
+        review: "cool!",
       },
     ],
     photo: tourImg07,
@@ -171,7 +197,13 @@ const tours = [
     price: 99,
     maxGroupSize: 8,
     desc: "this is the description",
-    reviews: [],
+    reviews: [
+      {
+        name: "lamian dillard",
+        rating: 3,
+        review: "great time",
+      }
+    ],
     photo: tourImg08,
     featured: false,
   },
