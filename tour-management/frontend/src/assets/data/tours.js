@@ -28,7 +28,7 @@ const tours = [
         review: "Great tour!",
       },
       {
-        name: "bhon joe vi",
+        name: "doop snogg",
         rating: 4,
         review: "had a great time, tour guide is very friendly",
       },
@@ -145,7 +145,7 @@ const tours = [
     desc: "this is the description",
     reviews: [
       {
-        name: "mevin kagnussen",
+        name: "gau pasol",
         rating: 4,
         review: "good stuff",
       },

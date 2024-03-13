@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import tourData from '../assets/data/tours';
 import calculateAvgRating from '../utilities/avgRating';
 import avatar from '../assets/images/avatar.jpg';
+import Booking from '../components/Booking/Booking';
 
 const TourDetails = () => {
 
@@ -133,7 +134,7 @@ const TourDetails = () => {
                     </Col>
 
                     <Col lg="4">
-                        
+                        <Booking tour={tour} />
                     </Col>
                 </Row>
             </Container>
