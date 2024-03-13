@@ -6,7 +6,7 @@
 
 .tour_info, .tour_reviews {
     border-radius: .5rem;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid rgb(229, 231, 235);;
     padding: 2rem;
 }
 

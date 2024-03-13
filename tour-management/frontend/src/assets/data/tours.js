@@ -38,7 +38,7 @@ const tours = [
         review: "Love hk very nice",
       },
       {
-        name: "raniel diccardio",
+        name: "duka loncic",
         rating: 4,
         review: "crikey mate that's bloody amazing",
       },
@@ -71,7 +71,7 @@ const tours = [
         review: "Brilliant",
       },
       {
-        name: "alonso fernando",
+        name: "pergio serez",
         rating: 5,
         review: "Muy bien",
       },
