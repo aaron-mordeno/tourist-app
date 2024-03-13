@@ -40,7 +40,7 @@ const tours = [
       {
         name: "duka loncic",
         rating: 4,
-        review: "crikey mate that's bloody amazing",
+        review: "very good",
       },
     ],
     photo: tourImg01,
@@ -122,9 +122,9 @@ const tours = [
         review: "it's alright",
       },
       {
-        name: "larles checlerc",
+        name: "raniel diccardio",
         rating: 4,
-        review: "very good",
+        review: "crikey it's bloody amazin",
       },
       {
         name: "jikola nokic",
