@@ -51,7 +51,7 @@ ul {
 .primary_btn a {
   font-size: 1.1rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-color) !important;
 }
 .primary_btn a:hover {
   color: inherit;

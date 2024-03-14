@@ -80,9 +80,9 @@
 .booking_btn a {
     text-decoration: none;
     font-size: .9rem;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .booking_btn a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }

@@ -14,7 +14,7 @@ const SearchBar = () => {
         const price = priceRef.current.value;
 
         if(location==='' || maxPeople===0 || price===0) {
-            return alert('Location and Max People must be valid');
+            return alert('Details must be valid');
         }
     }
 

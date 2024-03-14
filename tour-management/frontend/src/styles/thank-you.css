@@ -1,0 +1,8 @@
+.thank_you {
+    text-align: center;
+}
+
+.btnLink {
+    color: var(--secondary-color) !important;
+    text-decoration: none !important;
+}

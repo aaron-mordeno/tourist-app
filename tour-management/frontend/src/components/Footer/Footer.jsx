@@ -81,14 +81,7 @@ const Footer = () => {
 
                     <Col lg='3'>
                         <h5 className='footer_link-title'>Contact</h5>
-                        <ListGroup className='footer_quick-links'>                                
-                            <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
-                                <h6 className='mb-0 d-flex align-items-center gap-2'>
-                                    <span><i class="ri-map-pin-line"></i></span>
-                                    Address:
-                                </h6>
-                                <p className='mb-0'>Che Kung Miu Rd, Tai Wai</p>
-                            </ListGroupItem>
+                        <ListGroup className='footer_quick-links'>
                             <ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-3'>
                                 <h6 className='mb-0 d-flex align-items-center gap-2'>
                                     <span><i class="ri-mail-line"></i></span>

@@ -13,7 +13,7 @@ const tours = [
     title: "Victoria Peak",
     location: "Hong Kong Island",
     time: "10:00 AM",
-    price: 99,
+    price: 150,
     maxGroupSize: 10,
     desc: "this is the description",
     reviews: [
@@ -51,7 +51,7 @@ const tours = [
     title: "Tian Tan Buddha",
     location: "Ngong Ping",
     time: "8:00 AM",
-    price: 99,
+    price: 300,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -84,7 +84,7 @@ const tours = [
     title: "Wong Tai Sin Temple",
     location: "Wong Tai Sin",
     time: "12:00 PM",
-    price: 99,
+    price: 50,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -96,7 +96,7 @@ const tours = [
       {
         name: "sarlos cainz",
         rating: 5,
-        review: "smooth",
+        review: "smooth operation",
       },
       {
         name: "bimmy jutler",
@@ -112,7 +112,7 @@ const tours = [
     title: "Hong Kong Space Museum",
     location: "Tsim Sha Tsui",
     time: "9:00 AM",
-    price: 99,
+    price: 250,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -140,7 +140,7 @@ const tours = [
     title: "Avenue of Stars",
     location: "Tsim Sha Tsui",
     time: "1:00 PM",
-    price: 99,
+    price: 50,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -158,12 +158,12 @@ const tours = [
     title: "Temple Street Night Market",
     location: "Jordan",
     time: "6:00 PM",
-    price: 99,
+    price: 50,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
       {
-        name: "nando lorris",
+        name: "larles checlerc",
         rating: 3,
         review: "very fun",
       },
@@ -176,7 +176,7 @@ const tours = [
     title: "Hong Kong History Museum",
     location: "Tsim Sha Tsui",
     time: "8:00 AM",
-    price: 99,
+    price: 200,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [
@@ -194,7 +194,7 @@ const tours = [
     title: "Mong Kok Night Market",
     location: "Mong Kok",
     time: "7:00 PM",
-    price: 99,
+    price: 50,
     maxGroupSize: 8,
     desc: "this is the description",
     reviews: [

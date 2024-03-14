@@ -17,19 +17,13 @@
     border: 1px solid var(--primary-color) !important;
 }
 
-.btn:hover {
-    background-color: var(--secondary-color) !important;
-    border: 1px solid var(--primary-color) !important;
-    color: var(--primary-color);
-}
-
 .btnLink {
     color: var(--secondary-color);
     text-decoration: none !important;
 }
 
 .btnLink:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-decoration: none !important;
 }
 
