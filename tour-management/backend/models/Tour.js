@@ -7,16 +7,12 @@ const tourSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    city: {
+    location: {
       type: String,
       required: true,
     },
-    address: {
+    time: {
       type: String,
-      required: true,
-    },
-    distance: {
-      type: Number,
       required: true,
     },
     photo: {
