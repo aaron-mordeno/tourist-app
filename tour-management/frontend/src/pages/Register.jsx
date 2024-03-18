@@ -4,7 +4,7 @@ import {Container, Row, Col, Form, FormGroup, Button} from 'reactstrap';
 import {Link} from 'react-router-dom'
 import '../styles/login.css'
 
-import loginImg from '../assets/images/login.png'
+import registerImg from '../assets/images/login.png'
 import userIcon from '../assets/images/user.png'
 import { useState } from 'react';
 
@@ -12,7 +12,7 @@ const Register = () => {
 
     const [credentials, setCredentials] = useState (
         {
-            userName:undefined,
+            username:undefined,
           email:undefined,
           password:undefined,
         }
@@ -33,7 +33,7 @@ const Register = () => {
                     <Col lg="8" className="m-auto">
                         <div className="login__container d-flex justify-content-between">
                             <div className="login__img">
-                                <img src={loginImg} alt=""/>
+                                <img src={registerImg} alt=""/>
                             </div>
 
                             <div className="login__form">
@@ -44,7 +44,10 @@ const Register = () => {
 
                                 <Form onSubmit={handleClick}>
                                     <FormGroup>
-                                        <input type="text" placeholder='username' required id="username" onChange={handleChange}/>
+                                        <input type="text" placeholder='Username' required id="username" onChange={handleChange}/>
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <input type="email" placeholder='Email' required id="email" onChange={handleChange}/>
                                     </FormGroup>
                                     <FormGroup>
                                         <input type="password" placeholder='Password' required id="password" onChange={handleChange}/>
