@@ -1,11 +1,12 @@
-import React, {useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import '../styles/tour-details.css';
 import { Container, Row, Col, Form, ListGroup } from 'reactstrap';
 import { useParams } from 'react-router-dom';
-import tourData from '../assets/data/tours';
 import calculateAvgRating from '../utilities/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../components/Booking/Booking';
+import useFetch from './../hooks/useFetch'
+import {BASE_URL} from './../utilities/config'
 
 const TourDetails = () => {
 
@@ -16,26 +17,42 @@ const TourDetails = () => {
     // PLEASE NOTE
     // This is currently static data.
     // API call to load data from database to be implemented later
-    const tour = tourData.find(tour=> tour.id === id);
+    const {data:tour, loading,error} = useFetch(`${BASE_URL}/tours/${id}`)
 
     // De-structure tour object properties
-    const {title, location, time, price, maxGroupSize, desc, reviews, photo} = tour;
+    const {
+        photo,
+        title,
+        desc,
+        price,
+        address,
+        reviews,
+        city,
+        distance,
+        maxGroupSize,
+    } = tour;
 
     const {totalRating, avgRating} = calculateAvgRating(reviews);
+
+    const options = {day:"numeric", month: "long", year:"numeric"};
 
     // Submit request to the server
     const submitHandler = e=>{
         e.preventDefault();
         const reviewText = reviewMsgRef.current.value;
 
-        alert(`${reviewText}, ${tourRating}`);
-
         // Will implement API call later
-    }
+    };
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
 
     return <>
         <section>
             <Container>
+                {
+                    !loading && !error &&
                 <Row>
                     <Col lg='8'>
                         <div className="tour_content">
@@ -47,25 +64,35 @@ const TourDetails = () => {
 
                                 <div className="d-flex align-items-center gap-5">
                                     <span className='tour_rating d-flex align-items-center gap-1'>
-                                        <i class="ri-star-line" style={{"color":"var(--primary-color)"}}></i>
-                                        {calculateAvgRating === 0 ? null : avgRating} 
-                                        {totalRating === 0 ? 'Not rated' : <span>({reviews.length})</span>}
+                                        <i 
+                                        class="ri-star-line" 
+                                        style={{"color":"var(--primary-color)"}}
+                                        ></i>
+                                        {avgRating === 0 ? null : avgRating} 
+                                        {totalRating === 0 ? (
+                                            'Not rated'
+                                            ) : (
+                                        <span>({reviews.length})</span>
+                                        )}
                                     </span>
 
                                     <span>
-                                        <i className='ri-map-pin-line'></i> {location}
+                                        <i className='ri-map-pin-line'></i> {address}
                                     </span>
                                 </div>
 
                                 <div className="tour_extra-details">
                                         <span>
+                                            <i class="ri-map-pin-2-line"></i> {city}
+                                        </span>
+                                        <span>
                                             <i class="ri-money-dollar-circle-line"></i> ${price} per person
                                         </span>
                                         <span>
-                                            <i class="ri-time-line"></i> {time}
+                                            <i class="ri-map-pin-time-line"></i> {distance} km
                                         </span>
                                         <span>
-                                            <i className='ri-group-line'></i> {maxGroupSize}
+                                            <i className='ri-group-line'></i> {maxGroupSize} people
                                         </span>
                                     </div>
                                     <h5>Description</h5>
@@ -137,6 +164,7 @@ const TourDetails = () => {
                         <Booking tour={tour} />
                     </Col>
                 </Row>
+                }
             </Container>
         </section>
     </>

@@ -2,21 +2,35 @@ import React,{useRef} from 'react';
 import './search-bar.css';
 import { Col, Form, FormGroup } from 'reactstrap';
 
+import { BASE_URL } from '../utilities/config.js';
+import { useNavigate } from 'react-router-dom';
+
 const SearchBar = () => {
 
     const locationRef = useRef('');
-    const maxPeopleRef = useRef(1);
-    const priceRef = useRef(90);
+    const maxGroupSizeRef = useRef(0);
+    const distanceRef = useRef(0);
+    const navigate = useNavigate();
 
-    const searchHandler = () => {
+    const searchHandler = async() => {
         const location = locationRef.current.value;
-        const maxPeople = maxPeopleRef.current.value;
-        const price = priceRef.current.value;
+        const distance = distanceRef.current.value;
+        const maxGroupSize = maxGroupSizeRef.current.value;
 
-        if(location==='' || maxPeople===0 || price===0) {
+        if(location==='' || maxGroupSizeRef==='' || distanceRef==='') {
             return alert('Details must be valid');
         }
-    }
+
+        const res = await fetch(`${BASE_URL}/tours/search/getTourBySearch?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`)
+
+        if(!res.ok) alert('Something went wrong')
+
+        const result = await res.json()
+
+        navigate(`/tours/search?city=${location}&distance=${distance}&maxGroupSize=${maxGroupSize}`, 
+        {state: result.data})
+
+    };
 
     return <Col lg='12'>
         <div className='search_bar'>
@@ -36,7 +50,7 @@ const SearchBar = () => {
                     </span>
                     <div>
                         <h6>Max People</h6>
-                        <input type='number' placeholder='1' ref={maxPeopleRef} />
+                        <input type='number' placeholder='1' ref={maxGroupSizeRef} />
                     </div>
                 </FormGroup>
                 <FormGroup className='d-flex gap-3 form_group form_group_last'>
@@ -44,8 +58,8 @@ const SearchBar = () => {
                         <i class="ri-money-dollar-circle-line"></i>
                     </span>
                     <div>
-                        <h6>Price</h6>
-                        <input type='number' placeholder='50' ref={priceRef} />
+                        <h6>Distance</h6>
+                        <input type='number' placeholder='50' ref={distanceRef} />
                     </div>
                 </FormGroup>
 
